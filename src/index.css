@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-color: #1a1a1a;
+  --bg-darker: #121212;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  
+  --text-main: #f0f0f0;
+  --text-muted: #a0a0a0;
+  
+  --accent-red: #c90000;
+  --accent-red-hover: #ff1a1a;
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #050505;
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  /* Capa base: manchas rojas fijas grandes */
+  background-image:
+    radial-gradient(ellipse 800px 800px at 15% 20%, rgba(201, 0, 0, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 600px at 85% 70%, rgba(150, 0, 0, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 500px at 50% 50%, rgba(100, 0, 0, 0.1) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Aurora animada - capa 1: manchas grandes rojas que se mueven */
+body::before {
+  content: "";
+  position: fixed;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: 
+    radial-gradient(ellipse 700px 700px at 25% 25%, rgba(201, 0, 0, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 600px at 75% 30%, rgba(220, 20, 20, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 800px 500px at 60% 75%, rgba(180, 0, 0, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 700px at 10% 65%, rgba(201, 0, 0, 0.2) 0%, transparent 60%);
+  animation: auroraMove 15s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Aurora animada - capa 2: detalles rojos secundarios */
+body::after {
+  content: "";
+  position: fixed;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background:
+    radial-gradient(ellipse 600px 600px at 70% 40%, rgba(255, 30, 30, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 500px 400px at 20% 50%, rgba(201, 0, 0, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 500px at 90% 75%, rgba(180, 0, 20, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 400px 400px at 40% 15%, rgba(255, 0, 0, 0.12) 0%, transparent 60%);
+  animation: auroraMove2 20s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes auroraMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(4%, -3%) rotate(1.5deg); }
+  50% { transform: translate(-3%, 4%) rotate(-1deg); }
+  75% { transform: translate(2%, -2%) rotate(0.5deg); }
+  100% { transform: translate(-2%, 2%) rotate(-0.5deg); }
+}
+
+@keyframes auroraMove2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-5%, 3%) rotate(-1.5deg); }
+  50% { transform: translate(3%, -4%) rotate(1deg); }
+  75% { transform: translate(-2%, 2%) rotate(-0.5deg); }
+  100% { transform: translate(2%, -1%) rotate(0.5deg); }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-heading);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #fff, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+  color: var(--accent-red);
+}
+
+/* Animations */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(201, 0, 0, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(201, 0, 0, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(201, 0, 0, 0.2); }
+}

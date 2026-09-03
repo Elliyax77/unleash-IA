@@ -1,0 +1,148 @@
+.flip-clock-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 5rem 0 7rem;
+  perspective: 1000px;
+  width: 100%;
+}
+
+.flip-unit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flip-card {
+  position: relative;
+  width: 130px;
+  height: 160px;
+  background: linear-gradient(to bottom, #b30000, #7a0000);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(201, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flip-digit {
+  position: absolute;
+  font-family: var(--font-heading);
+  font-size: 6.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-label {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.flip-separator {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: -45px;
+  animation: pulse-colon 2s infinite ease-in-out;
+}
+
+@keyframes pulse-colon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Escalado para pantallas menores a 1200px (Laptops) */
+@media (max-width: 1200px) {
+  .flip-clock-wrapper {
+    gap: 10px;
+    margin: 3rem 0;
+  }
+  
+  .flip-card {
+    width: 80px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  
+  .flip-digit {
+    font-size: 3.5rem;
+  }
+  
+  .flip-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+  
+  .flip-separator {
+    font-size: 3rem;
+    margin-top: -25px;
+  }
+}
+
+/* Escalado para Tablets (menores a 900px) */
+@media (max-width: 900px) {
+  .flip-clock-wrapper {
+    gap: 8px;
+    margin: 2rem 0;
+  }
+  
+  .flip-card {
+    width: 70px;
+    height: 90px;
+    border-radius: 8px;
+  }
+  
+  .flip-digit {
+    font-size: 3rem;
+  }
+  
+  .flip-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .flip-separator {
+    font-size: 2.5rem;
+    margin-top: -20px;
+  }
+}
+
+/* Escalado para Móviles (menores a 480px) */
+@media (max-width: 480px) {
+  .flip-clock-wrapper {
+    gap: 5px;
+  }
+  
+  .flip-card {
+    width: 55px;
+    height: 70px;
+  }
+  
+  .flip-digit {
+    font-size: 2.5rem;
+  }
+  
+  .flip-label {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .flip-separator {
+    font-size: 2rem;
+    margin-top: -15px;
+  }
+}

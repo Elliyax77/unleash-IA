@@ -1,0 +1,220 @@
+.masterclass {
+  padding: 100px 0;
+  position: relative;
+}
+
+.masterclass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 0, 0, 0.05) 0%, rgba(201, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.masterclass-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mc-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.mc-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.mc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.mc-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.mc-detail-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-main);
+}
+
+.mc-detail-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.mc-btn {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Timer Styles */
+.mc-timer-wrapper {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mc-timer-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(201, 0, 0, 0.2);
+  filter: blur(40px);
+  border-radius: 50%;
+}
+
+.timer-title {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timer-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(201, 0, 0, 0.15);
+}
+
+.timer-value {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.timer-label {
+  font-size: 0.75rem;
+  color: var(--accent-red);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.timer-footer {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .masterclass-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .timer-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .mc-timer-wrapper {
+    padding: 2rem 1rem;
+  }
+  .timer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .timer-value {
+    font-size: 2rem;
+  }
+}
+
+/* Ajustes específicos para el FlipClock dentro de la página principal para que no desborde la cuadrícula */
+.mc-home-clock {
+  gap: 8px !important;
+  margin: 1rem 0 !important;
+}
+
+.mc-home-clock .flip-card {
+  width: 70px !important;
+  height: 90px !important;
+  border-radius: 8px !important;
+}
+
+.mc-home-clock .flip-digit {
+  font-size: 3rem !important;
+}
+
+.mc-home-clock .flip-separator {
+  font-size: 2.5rem !important;
+  margin-top: -20px !important;
+}
+
+.mc-home-clock .flip-label {
+  font-size: 0.7rem !important;
+  letter-spacing: 1.5px !important;
+}
+
+@media (max-width: 480px) {
+  .mc-home-clock {
+    gap: 4px !important;
+  }
+  .mc-home-clock .flip-card {
+    width: 50px !important;
+    height: 65px !important;
+  }
+  .mc-home-clock .flip-digit {
+    font-size: 2.2rem !important;
+  }
+  .mc-home-clock .flip-separator {
+    font-size: 1.8rem !important;
+  }
+  .mc-home-clock .flip-label {
+    font-size: 0.5rem !important;
+  }
+}
