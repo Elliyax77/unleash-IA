@@ -12,12 +12,14 @@ function App() {
     <Router>
       <div className="app-container">
         <FloatingShapes />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/masterclass-2" element={<MasterclassInfo />} />
-        </Routes>
-        <Footer />
+        <main style={{ position: 'relative', zIndex: 10 }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/masterclass-2" element={<MasterclassInfo />} />
+          </Routes>
+          <Footer />
+        </main>
       </div>
     </Router>
   );
