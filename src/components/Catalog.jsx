@@ -136,24 +136,34 @@ const Catalog = () => {
         </div>
         
         <motion.div 
-          className="catalog-footer"
+          className="catalog-cta"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <p>¿Quieres que tu negocio sea el próximo caso de éxito?</p>
+          <div className="cta-glow"></div>
+          <motion.span 
+            className="cta-badge"
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            🔥 CUPOS LIMITADOS
+          </motion.span>
+          <h2 className="cta-headline">¿Quieres que tu negocio sea el <span>próximo caso de éxito</span>?</h2>
+          <p className="cta-subtext">Agenda una llamada gratuita y te mostramos cómo podemos transformar tu presencia digital.</p>
           <motion.a
             href="https://wa.me/584244980621?text=Hola!%20Quiero%20cotizar%20una%20página%20web%20para%20mi%20negocio.%20¿Me%20pueden%20dar%20más%20información?"
             target="_blank"
             rel="noreferrer"
-            className="btn-primary"
-            whileHover={{ scale: 1.05 }}
+            className="cta-button"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(201, 0, 0, 0.6)" }}
             whileTap={{ scale: 0.95 }}
           >
-            Cotizar mi Web
+            🚀 Cotizar mi Web Ahora
           </motion.a>
+          <p className="cta-trust">✓ Sin compromiso &nbsp; ✓ Respuesta en menos de 24h</p>
         </motion.div>
       </div>
     </section>
