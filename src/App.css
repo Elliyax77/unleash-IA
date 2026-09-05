@@ -1,1 +1,5 @@
 /* Limpiamos el CSS por defecto de Vite */
+
+.app-container {
+  isolation: isolate;
+}

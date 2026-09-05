@@ -150,17 +150,12 @@
 .catalog-footer {
   text-align: center;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
 }
 
 .catalog-footer p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: var(--text-muted);
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {

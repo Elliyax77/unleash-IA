@@ -11,6 +11,7 @@
 
 .shape {
   position: absolute;
+  z-index: -1;
 }
 
 /* Gran orbe rojo pulsante - arriba izquierda */

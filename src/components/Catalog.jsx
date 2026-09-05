@@ -145,7 +145,9 @@ const Catalog = () => {
         >
           <p>¿Quieres que tu negocio sea el próximo caso de éxito?</p>
           <motion.a
-            href="#contacto"
+            href="https://wa.me/584244980621?text=Hola!%20Quiero%20cotizar%20una%20página%20web%20para%20mi%20negocio.%20¿Me%20pueden%20dar%20más%20información?"
+            target="_blank"
+            rel="noreferrer"
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
