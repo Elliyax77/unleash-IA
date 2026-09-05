@@ -98,6 +98,14 @@ const MasterclassInfo = () => {
                 <p>Fechas por anunciar</p>
               </div>
             </motion.div>
+
+            <motion.div className="detail-item" variants={fadeInUp}>
+              <div className="detail-icon"><MapPin size={24} /></div>
+              <div>
+                <h4>Ubicación</h4>
+                <p>San Diego, Big Low Center</p>
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.div 
