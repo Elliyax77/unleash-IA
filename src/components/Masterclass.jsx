@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Calendar, Clock, Video, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FlipClock from './FlipClock';
 import './Masterclass.css';
@@ -94,10 +94,10 @@ const Masterclass = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.65 }}
               >
-                <Video className="text-accent" size={24} />
+                <MapPin className="text-accent" size={24} />
                 <div>
-                  <h4>Online En Vivo</h4>
-                  <p>Acceso desde cualquier lugar</p>
+                  <h4>100% Presencial</h4>
+                  <p>Una experiencia en vivo e interactiva</p>
                 </div>
               </motion.div>
             </div>
