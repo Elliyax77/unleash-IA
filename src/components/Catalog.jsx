@@ -44,136 +44,129 @@ const cardReveal = {
 
 const Catalog = () => {
   return (
-    <>
-      <section className="catalog section-theme-gray" id="catalogo">
-        <div className="container">
-          <div className="catalog-header">
-            <motion.div
-              variants={fadeInLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <span className="section-subtitle text-accent-gray">NUESTRO TRABAJO</span>
-              <h2 className="section-title">Catálogo de <br/>Experiencias Web</h2>
-            </motion.div>
-            <motion.p 
-              className="catalog-intro"
-              variants={fadeInRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            >
-              No hacemos simples páginas web. Creamos activos digitales diseñados para vender, escalar e impactar. Explora algunos de nuestros casos de éxito.
-            </motion.p>
-          </div>
-
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <motion.div 
-                key={project.id}
-                className="project-card glass-card"
-                variants={cardReveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: index * 0.25, ease: "easeOut" }}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              >
-                <div className="project-image-container">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                  <div className="project-overlay">
-                    <a href={project.link} target="_blank" rel="noreferrer" className="project-link-btn">
-                      Visitar Web <ExternalLink size={18} />
-                    </a>
-                  </div>
-                </div>
-                <div className="project-info">
-                  <motion.span
-                    className="project-category"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
-                  >
-                    {project.category}
-                  </motion.span>
-                  <motion.h3
-                    className="project-title"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.4 + index * 0.2 }}
-                  >
-                    {project.title}
-                  </motion.h3>
-                  <motion.p
-                    className="project-description"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
-                  >
-                    {project.description}
-                  </motion.p>
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project-link-text"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.6 + index * 0.2 }}
-                    whileHover={{ x: 5 }}
-                  >
-                    Ver caso completo <ChevronRight size={16} />
-                  </motion.a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sección 5: CTA de Conversión (Tema Rojo) */}
-      <section className="cta-conversion-section section-theme-red">
-        <div className="container">
-          <motion.div 
-            className="catalog-cta"
-            variants={fadeInUp}
+    <section className="catalog" id="catalogo">
+      <div className="container">
+        <div className="catalog-header">
+          <motion.div
+            variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="cta-glow"></div>
-            <motion.span 
-              className="cta-badge"
-              animate={{ opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              🔥 CUPOS LIMITADOS
-            </motion.span>
-            <h2 className="cta-headline">¿Quieres que tu negocio sea el <span>próximo caso de éxito</span>?</h2>
-            <p className="cta-subtext">Agenda una llamada gratuita y te mostramos cómo podemos transformar tu presencia digital.</p>
-            <motion.a
-              href="https://wa.me/584244980621?text=Hola!%20Quiero%20cotizar%20una%20página%20web%20para%20mi%20negocio.%20¿Me%20pueden%20dar%20más%20información?"
-              target="_blank"
-              rel="noreferrer"
-              className="cta-button"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(201, 0, 0, 0.6)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              🚀 Cotizar mi Web Ahora
-            </motion.a>
-            <p className="cta-trust">✓ Sin compromiso &nbsp; ✓ Respuesta en menos de 24h</p>
+            <span className="section-subtitle text-accent">NUESTRO TRABAJO</span>
+            <h2 className="section-title">Catálogo de <br/>Experiencias Web</h2>
           </motion.div>
+          <motion.p 
+            className="catalog-intro"
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          >
+            No hacemos simples páginas web. Creamos activos digitales diseñados para vender, escalar e impactar. Explora algunos de nuestros casos de éxito.
+          </motion.p>
         </div>
-      </section>
-    </>
+
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <motion.div 
+              key={project.id}
+              className="project-card glass-card"
+              variants={cardReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: index * 0.25, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+            >
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
+                <div className="project-overlay">
+                  <a href={project.link} target="_blank" rel="noreferrer" className="project-link-btn">
+                    Visitar Web <ExternalLink size={18} />
+                  </a>
+                </div>
+              </div>
+              <div className="project-info">
+                <motion.span
+                  className="project-category"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
+                >
+                  {project.category}
+                </motion.span>
+                <motion.h3
+                  className="project-title"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.2 }}
+                >
+                  {project.title}
+                </motion.h3>
+                <motion.p
+                  className="project-description"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
+                >
+                  {project.description}
+                </motion.p>
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link-text"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.6 + index * 0.2 }}
+                  whileHover={{ x: 5 }}
+                >
+                  Ver caso completo <ChevronRight size={16} />
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <motion.div 
+          className="catalog-cta"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="cta-glow"></div>
+          <motion.span 
+            className="cta-badge"
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            🔥 CUPOS LIMITADOS
+          </motion.span>
+          <h2 className="cta-headline">¿Quieres que tu negocio sea el <span>próximo caso de éxito</span>?</h2>
+          <p className="cta-subtext">Agenda una llamada gratuita y te mostramos cómo podemos transformar tu presencia digital.</p>
+          <motion.a
+            href="https://wa.me/584244980621?text=Hola!%20Quiero%20cotizar%20una%20página%20web%20para%20mi%20negocio.%20¿Me%20pueden%20dar%20más%20información?"
+            target="_blank"
+            rel="noreferrer"
+            className="cta-button"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(201, 0, 0, 0.6)" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            🚀 Cotizar mi Web Ahora
+          </motion.a>
+          <p className="cta-trust">✓ Sin compromiso &nbsp; ✓ Respuesta en menos de 24h</p>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

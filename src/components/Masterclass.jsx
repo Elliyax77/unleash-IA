@@ -36,7 +36,7 @@ const Masterclass = () => {
   const y2 = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section className="masterclass section-theme-red" id="masterclass" ref={sectionRef}>
+    <section className="masterclass" id="masterclass" ref={sectionRef}>
       <div className="container">
         <div className="masterclass-grid">
           
