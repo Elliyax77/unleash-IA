@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, BookOpen, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Calendar, MapPin, Clock, BookOpen, CheckCircle, ArrowLeft, Users, Bell } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import FlipClock from '../components/FlipClock';
 import './MasterclassInfo.css';
 
 const fadeInUp = {
@@ -47,22 +46,41 @@ const MasterclassInfo = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <span className="section-subtitle text-accent">PRÓXIMO EVENTO</span>
-          <h1 className="mc-title">2da Master Class <br/>de Inteligencia Artificial</h1>
+          <span className="section-subtitle text-accent">PRÓXIMA EDICIÓN</span>
+          <h1 className="mc-title">Master Class <br/>de Inteligencia Artificial</h1>
           <p className="mc-intro">
-            Aprende a dominar las herramientas que están cambiando el mundo. Un evento intensivo diseñado para llevar tus habilidades al siguiente nivel.
+            Aprende a dominar las herramientas que están transformando el mundo. Un entrenamiento intensivo diseñado para potenciar tus habilidades y tu negocio desde cero.
           </p>
         </motion.div>
 
         <motion.div 
+          className="mc-status-banner glass-card"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          {/* Configura aquí la fecha de la masterclass. Por ahora tiene una fecha futura de prueba */}
-          <FlipClock targetDate="2026-10-15T09:00:00" />
+          <div className="status-badge-row">
+            <span className="status-live-dot"></span>
+            <span className="status-badge-text">ESTADO DE LA CONVOCATORIA</span>
+          </div>
+          <div className="status-content-row">
+            <div className="status-main-info">
+              <h2 className="status-heading">Fecha no definida</h2>
+              <p className="status-subtext">
+                Actualmente estamos planificando la próxima edición. Las fechas oficiales y apertura de cupos se anunciarán próximamente.
+              </p>
+            </div>
+            <a 
+              href="https://wa.me/584244980621?text=Hola!%20Quiero%20más%20información%20y%20estar%20en%20la%20lista%20de%20espera%20para%20la%20próxima%20Masterclass%20de%20IA"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary status-action-btn"
+            >
+              <Bell size={18} /> Avisarme al abrir cupos
+            </a>
+          </div>
         </motion.div>
 
         <div className="mc-details-grid">
@@ -78,24 +96,24 @@ const MasterclassInfo = () => {
             <motion.div className="detail-item" variants={fadeInUp}>
               <div className="detail-icon"><Calendar size={24} /></div>
               <div>
+                <h4>Fecha</h4>
+                <p className="text-accent font-semibold">Fecha no definida (Próximamente)</p>
+              </div>
+            </motion.div>
+
+            <motion.div className="detail-item" variants={fadeInUp}>
+              <div className="detail-icon"><Clock size={24} /></div>
+              <div>
                 <h4>Duración</h4>
                 <p>2 Días Intensivos</p>
               </div>
             </motion.div>
 
             <motion.div className="detail-item" variants={fadeInUp}>
-              <div className="detail-icon"><MapPin size={24} /></div>
+              <div className="detail-icon"><Users size={24} /></div>
               <div>
                 <h4>Modalidad</h4>
                 <p>100% Presencial</p>
-              </div>
-            </motion.div>
-            
-            <motion.div className="detail-item" variants={fadeInUp}>
-              <div className="detail-icon"><Clock size={24} /></div>
-              <div>
-                <h4>Próximamente</h4>
-                <p>Fechas por anunciar</p>
               </div>
             </motion.div>
 
@@ -172,15 +190,15 @@ const MasterclassInfo = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2>¿Listo para dar el salto tecnológico?</h2>
-          <p>Los cupos son limitados para asegurar una experiencia personalizada.</p>
+          <h2>¿Quieres ser el primero en enterarte?</h2>
+          <p>Los cupos son limitados para asegurar una experiencia práctica y personalizada.</p>
           <a 
-            href="https://wa.me/584244980621?text=Hola!%20Quiero%20más%20información%20y%20reservar%20mi%20lugar%20para%20la%202da%20Masterclass%20de%20IA" 
+            href="https://wa.me/584244980621?text=Hola!%20Quiero%20más%20información%20sobre%20las%20próximas%20fechas%20de%20la%20Masterclass%20de%20IA" 
             target="_blank" 
             rel="noreferrer" 
             className="btn-primary large"
           >
-            Reservar mi lugar ahora
+            Más información por WhatsApp
           </a>
         </motion.div>
 

@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, CheckCircle, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import FlipClock from './FlipClock';
 import './Masterclass.css';
 
 const fadeInLeft = {
@@ -58,7 +57,8 @@ const Masterclass = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Próxima <span className="text-accent">Masterclass IA</span>
+              Más información sobre la <br />
+              <span className="text-accent">Masterclass IA</span>
             </motion.h2>
             <motion.p
               className="mc-description"
@@ -68,7 +68,7 @@ const Masterclass = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.35 }}
             >
-              Descubre cómo integrar Inteligencia Artificial en tus proyectos web para automatizar procesos, mejorar la experiencia de usuario y multiplicar tus conversiones. Una sesión exclusiva donde revelaremos nuestros secretos.
+              Aprende a dominar e integrar Inteligencia Artificial en tus proyectos y trabajo diario para automatizar procesos, potenciar tu creatividad y multiplicar resultados. Una formación intensiva diseñada para llevar tus habilidades al siguiente nivel.
             </motion.p>
             
             <div className="mc-details">
@@ -82,8 +82,8 @@ const Masterclass = () => {
               >
                 <Calendar className="text-accent" size={24} />
                 <div>
-                  <h4>15 de Octubre, 2026</h4>
-                  <p>Guarda la fecha</p>
+                  <h4>Fecha no definida</h4>
+                  <p>Próximas fechas por anunciar</p>
                 </div>
               </motion.div>
               <motion.div
@@ -97,7 +97,7 @@ const Masterclass = () => {
                 <MapPin className="text-accent" size={24} />
                 <div>
                   <h4>100% Presencial</h4>
-                  <p>Una experiencia en vivo e interactiva</p>
+                  <p>San Diego, Big Low Center</p>
                 </div>
               </motion.div>
             </div>
@@ -119,7 +119,7 @@ const Masterclass = () => {
           </motion.div>
 
           <motion.div
-            className="mc-timer-wrapper glass-card"
+            className="mc-preview-wrapper glass-card"
             style={{ y: y2 }}
             variants={fadeInRight}
             initial="hidden"
@@ -127,26 +127,47 @@ const Masterclass = () => {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           >
+            <div className="preview-badge-container">
+              <span className="preview-badge">CAPACITACIÓN INTENSIVA</span>
+            </div>
             <motion.h3
-              className="timer-title"
+              className="preview-title"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
-              El tiempo se agota
+              ¿Qué aprenderás en la Masterclass?
             </motion.h3>
-            <FlipClock targetDate="2026-10-15T09:00:00" className="mc-home-clock" />
+            <ul className="preview-list">
+              <li>
+                <CheckCircle size={20} className="text-accent" />
+                <span><strong>Fundamentos e impacto:</strong> Conceptos clave y panorama actual de la IA.</span>
+              </li>
+              <li>
+                <CheckCircle size={20} className="text-accent" />
+                <span><strong>Ingeniería de Prompts:</strong> El arte de comunicarte eficazmente con los modelos.</span>
+              </li>
+              <li>
+                <CheckCircle size={20} className="text-accent" />
+                <span><strong>Herramientas líderes:</strong> Uso práctico en tu flujo de trabajo y proyectos.</span>
+              </li>
+              <li>
+                <CheckCircle size={20} className="text-accent" />
+                <span><strong>Práctica guiada:</strong> Ejercicios paso a paso con casos reales.</span>
+              </li>
+            </ul>
             <motion.div
-              className="timer-footer"
+              className="preview-footer"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <Clock size={16} /> Cupos limitados
+              <Sparkles size={18} className="text-accent" />
+              <span>Cupos limitados para garantizar una experiencia personalizada</span>
             </motion.div>
           </motion.div>
 
