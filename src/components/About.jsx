@@ -41,7 +41,7 @@ const About = () => {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="about" id="nosotros" ref={ref}>
+    <section className="about section-theme-gray" id="nosotros" ref={ref}>
       {/* Decorative line */}
       <div className="about-line" />
 
@@ -56,7 +56,7 @@ const About = () => {
           <span className="about-eyebrow">¿Quiénes somos?</span>
           <h2 className="about-title">
             Todo lo que tu negocio<br />
-            <span className="text-accent">necesita en un solo lugar</span>
+            <span className="text-accent-gray">necesita en un solo lugar</span>
           </h2>
           <p className="about-subtitle">
             <strong>Unleash AI</strong> es una empresa especializada en transformar negocios
@@ -92,7 +92,7 @@ const About = () => {
           <p className="about-cta-text">
             ¿Listo para llevar tu negocio al siguiente nivel?
           </p>
-          <a href="#catalogo" className="btn-primary">
+          <a href="#catalogo" className="btn-gray">
             Ver nuestros servicios <ArrowRight size={18} />
           </a>
         </motion.div>

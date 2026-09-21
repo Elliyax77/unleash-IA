@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 
 .project-card {
@@ -140,11 +140,43 @@
   color: var(--accent-red);
   font-weight: 600;
   font-size: 0.95rem;
-  transition: gap 0.3s ease;
+  transition: gap 0.3s ease, color 0.3s ease;
 }
 
 .project-link-text:hover {
   gap: 8px;
+}
+
+/* Gray Theme Overrides for Catalog */
+.section-theme-gray .project-category {
+  color: #cbd5e1;
+}
+
+.section-theme-gray .project-link-btn {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+  color: #090a0d;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.section-theme-gray .project-link-btn:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.35);
+}
+
+.section-theme-gray .project-link-text {
+  color: #cbd5e1;
+}
+
+.section-theme-gray .project-link-text:hover {
+  color: #ffffff;
+}
+
+/* Conversion CTA Section (Red Theme) */
+.cta-conversion-section {
+  padding: 80px 0 20px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .catalog-cta {
