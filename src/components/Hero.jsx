@@ -48,7 +48,7 @@ const Hero = () => {
           className="hero-actions"
         >
           <a href="#catalogo" className="btn-primary">
-            Ver Catálogo <ArrowRight size={18} />
+            Ver Catálogo de Webs <ArrowRight size={18} />
           </a>
           <a href="#masterclass" className="btn-secondary glass">
             Próxima Masterclass
