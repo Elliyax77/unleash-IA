@@ -21,7 +21,7 @@ const scaleIn = {
   visible: { opacity: 1, scale: 1 }
 };
 
-const Footer = () => {
+const Footer = ({ onOpenLegal, onOpenCookieSettings }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -126,6 +126,64 @@ const Footer = () => {
         </motion.div>
       </div>
 
+      {/* Barra de Enlaces Legales Accesibles */}
+      <div className="container">
+        <div className="footer-legal-bar">
+          <ul className="legal-links-list">
+            <li>
+              <button 
+                type="button" 
+                onClick={() => onOpenLegal && onOpenLegal('avisoLegal')}
+                className="footer-legal-link"
+              >
+                Aviso Legal
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                onClick={() => onOpenLegal && onOpenLegal('privacidad')}
+                className="footer-legal-link"
+              >
+                Política de Privacidad
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                onClick={() => onOpenLegal && onOpenLegal('cookies')}
+                className="footer-legal-link"
+              >
+                Política de Cookies
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                onClick={() => onOpenLegal && onOpenLegal('terminos')}
+                className="footer-legal-link"
+              >
+                Términos & Masterclass
+              </button>
+            </li>
+            <li className="legal-sep" aria-hidden="true">•</li>
+            <li>
+              <button 
+                type="button" 
+                onClick={() => onOpenCookieSettings && onOpenCookieSettings()}
+                className="footer-legal-link cookie-config-trigger"
+                title="Configurar preferencias de cookies"
+              >
+                ⚙️ Configurar Cookies
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <motion.div
         className="footer-bottom border-top"
         initial={{ opacity: 0, y: 20 }}
@@ -148,6 +206,7 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
 
