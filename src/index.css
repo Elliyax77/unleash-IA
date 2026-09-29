@@ -21,11 +21,20 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
 body {
   font-family: var(--font-body);
   background-color: #050505;
   color: var(--text-main);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 
   /* Capa base: manchas rojas fijas grandes */
@@ -35,6 +44,7 @@ body {
     radial-gradient(ellipse 500px 500px at 50% 50%, rgba(100, 0, 0, 0.1) 0%, transparent 60%);
   background-attachment: fixed;
 }
+
 
 /* Aurora animada - capa 1: manchas grandes rojas que se mueven */
 body::before {
@@ -150,6 +160,13 @@ button {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
 
 .text-gradient {
   background: linear-gradient(90deg, #fff, #a0a0a0);

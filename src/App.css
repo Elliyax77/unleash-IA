@@ -2,4 +2,8 @@
 
 .app-container {
   isolation: isolate;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
+
