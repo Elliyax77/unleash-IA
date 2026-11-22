@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Calendar, MapPin, ExternalLink, CheckCircle, Sparkles } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import FlipClock from './FlipClock';
 import './Masterclass.css';
 
 const fadeInLeft = {
@@ -82,8 +83,8 @@ const Masterclass = () => {
               >
                 <Calendar className="text-accent" size={24} />
                 <div>
-                  <h4>Fecha no definida</h4>
-                  <p>Próximas fechas por anunciar</p>
+                  <h4>14 de Diciembre, 2026</h4>
+                  <p>Próxima edición confirmada</p>
                 </div>
               </motion.div>
               <motion.div
@@ -113,13 +114,13 @@ const Masterclass = () => {
                 to="/masterclass-2"
                 className="btn-primary mc-btn"
               >
-                Más información <ExternalLink size={18} />
+                Ver Programa Completo <ExternalLink size={18} />
               </Link>
             </motion.div>
           </motion.div>
 
           <motion.div
-            className="mc-preview-wrapper glass-card"
+            className="mc-timer-wrapper glass-card"
             style={{ y: y2 }}
             variants={fadeInRight}
             initial="hidden"
@@ -128,38 +129,23 @@ const Masterclass = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           >
             <div className="preview-badge-container">
-              <span className="preview-badge">CAPACITACIÓN INTENSIVA</span>
+              <span className="preview-badge">🔥 EDICIÓN PRESENCIAL • 14 DE DICIEMBRE</span>
             </div>
             <motion.h3
-              className="preview-title"
+              className="timer-title"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              ¿Qué aprenderás en la Masterclass?
+              El tiempo se agota
             </motion.h3>
-            <ul className="preview-list">
-              <li>
-                <CheckCircle size={20} className="text-accent" />
-                <span><strong>Fundamentos e impacto:</strong> Conceptos clave y panorama actual de la IA.</span>
-              </li>
-              <li>
-                <CheckCircle size={20} className="text-accent" />
-                <span><strong>Ingeniería de Prompts:</strong> El arte de comunicarte eficazmente con los modelos.</span>
-              </li>
-              <li>
-                <CheckCircle size={20} className="text-accent" />
-                <span><strong>Herramientas líderes:</strong> Uso práctico en tu flujo de trabajo y proyectos.</span>
-              </li>
-              <li>
-                <CheckCircle size={20} className="text-accent" />
-                <span><strong>Práctica guiada:</strong> Ejercicios paso a paso con casos reales.</span>
-              </li>
-            </ul>
+
+            <FlipClock targetDate="2026-12-14T09:00:00" className="mc-home-clock" />
+
             <motion.div
-              className="preview-footer"
+              className="timer-footer"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
