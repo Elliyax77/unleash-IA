@@ -64,17 +64,17 @@ const MasterclassInfo = () => {
         >
           <div className="status-badge-row">
             <span className="status-live-dot"></span>
-            <span className="status-badge-text">CONVOCATORIA CONFIRMADA • 14 DE DICIEMBRE, 2026</span>
+            <span className="status-badge-text">CONVOCATORIA CONFIRMADA • 14 Y 16 DE DICIEMBRE, 2026</span>
           </div>
           <div className="status-content-row">
             <div className="status-main-info">
-              <h2 className="status-heading">Fecha Confirmada: 14 de Diciembre</h2>
+              <h2 className="status-heading">Fechas Confirmadas: 14 y 16 de Diciembre</h2>
               <p className="status-subtext">
                 Las inscripciones ya están abiertas. El contador regresivo está activo y los cupos son estrictamente limitados para garantizar una capacitación práctica y personalizada.
               </p>
             </div>
             <a 
-              href="https://wa.me/584244980621?text=Hola!%20Quiero%20asegurar%20mi%20cupo%20para%20la%20Masterclass%20de%20IA%20del%2014%20de%20diciembre"
+              href="https://wa.me/584244980621?text=Hola!%20Quiero%20asegurar%20mi%20cupo%20para%20la%20Masterclass%20de%20IA%20del%2014%20y%2016%20de%20diciembre"
               target="_blank"
               rel="noreferrer"
               className="btn-primary status-action-btn"
@@ -102,7 +102,7 @@ const MasterclassInfo = () => {
               <div className="detail-icon"><Calendar size={24} /></div>
               <div>
                 <h4>Fecha</h4>
-                <p className="text-accent font-semibold">14 de Diciembre, 2026</p>
+                <p className="text-accent font-semibold">14 y 16 de Diciembre, 2026</p>
               </div>
             </motion.div>
 
@@ -198,7 +198,7 @@ const MasterclassInfo = () => {
           <h2>¿Listo para dar el salto tecnológico?</h2>
           <p>Los cupos son limitados para asegurar una experiencia práctica y personalizada.</p>
           <a 
-            href="https://wa.me/584244980621?text=Hola!%20Quiero%20más%20información%20y%20reservar%20mi%20lugar%20para%20la%20Masterclass%20de%20IA%20del%2014%20de%20diciembre" 
+            href="https://wa.me/584244980621?text=Hola!%20Quiero%20más%20información%20y%20reservar%20mi%20lugar%20para%20la%20Masterclass%20de%20IA%20del%2014%20y%2016%20de%20diciembre" 
             target="_blank" 
             rel="noreferrer" 
             className="btn-primary large"

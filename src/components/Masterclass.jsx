@@ -83,8 +83,8 @@ const Masterclass = () => {
               >
                 <Calendar className="text-accent" size={24} />
                 <div>
-                  <h4>14 de Diciembre, 2026</h4>
-                  <p>Próxima edición confirmada</p>
+                  <h4>14 y 16 de Diciembre, 2026</h4>
+                  <p>Próxima edición confirmada (2 días)</p>
                 </div>
               </motion.div>
               <motion.div
@@ -129,7 +129,7 @@ const Masterclass = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           >
             <div className="preview-badge-container">
-              <span className="preview-badge">🔥 EDICIÓN PRESENCIAL • 14 DE DICIEMBRE</span>
+              <span className="preview-badge">🔥 EDICIÓN PRESENCIAL • 14 Y 16 DE DICIEMBRE</span>
             </div>
             <motion.h3
               className="timer-title"
