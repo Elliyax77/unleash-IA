@@ -19,6 +19,14 @@ const projects = [
     description: "Tienda online especializada en la venta de suplementos y vitaminas para niños con condiciones. Diseño accesible e intuitivo para facilitar la experiencia de compra.",
     image: "/projects/suplevit.png",
     link: "https://suplevit-ve.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "Kanko Travel",
+    category: "Agencia de Viajes & Turismo de Alta Gama",
+    description: "Plataforma turística para rutas internacionales, cruceros y destinos nacionales. Cuenta con cotizador interactivo a la medida, itinerarios día a día y panel CMS administrativo integrado.",
+    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1000&auto=format&fit=crop",
+    link: "https://kanko-travel-web.vercel.app/"
   }
 ];
 
