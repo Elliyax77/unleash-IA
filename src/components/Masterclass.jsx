@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Calendar, MapPin, Clock, ExternalLink, Sparkles, Zap, CheckCircle } from 'lucide-react';
+import { Calendar, MapPin, Clock, ExternalLink, Sparkles, Zap, CheckCircle, Laptop } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FlipClock from './FlipClock';
 import './Masterclass.css';
@@ -27,7 +27,7 @@ const scaleIn = {
 
 const Masterclass = () => {
   const sectionRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
@@ -42,7 +42,7 @@ const Masterclass = () => {
     <section className="masterclass" id="masterclass" ref={sectionRef}>
       <div className="container">
         <div className="masterclass-grid">
-          
+
           <motion.div
             className="mc-content glass-card"
             style={{ padding: '3rem', y: y1 }}
@@ -74,7 +74,7 @@ const Masterclass = () => {
             >
               Aprende a dominar e integrar Inteligencia Artificial en tus proyectos y trabajo diario para automatizar procesos, potenciar tu productividad x10 y abrir nuevas vías de monetización. Formación 100% presencial y práctica.
             </motion.p>
-            
+
             <div className="mc-details">
               <motion.div
                 className="mc-detail-item"
@@ -120,10 +120,25 @@ const Masterclass = () => {
                   <p>San Diego, Big Low Center (Valencia, Carabobo)</p>
                 </div>
               </motion.div>
+
+              <motion.div
+                className="mc-detail-item"
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <Laptop className="text-accent" size={24} />
+                <div>
+                  <h4>Laptop (Preferiblemente)</h4>
+                  <p>Para prácticas guiadas en vivo (no limitativo)</p>
+                </div>
+              </motion.div>
             </div>
 
             {/* Banner llamativo: Aparta con solo $5 USD */}
-            <motion.div 
+            <motion.div
               className="mc-price-highlight-banner"
               variants={fadeInUp}
               initial="hidden"
@@ -147,7 +162,7 @@ const Masterclass = () => {
                 Congela tu lugar con $5 USD y abonas los $30 restantes el primer día de clase.
               </p>
             </motion.div>
-            
+
             {/* Botones de acción */}
             <motion.div
               className="mc-cta-buttons-row"
@@ -157,7 +172,7 @@ const Masterclass = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <a 
+              <a
                 href={WHATSAPP_RESERVATION_URL}
                 target="_blank"
                 rel="noreferrer"
@@ -167,7 +182,7 @@ const Masterclass = () => {
                 <span>Apartar por $5 USD</span>
               </a>
 
-              <Link 
+              <Link
                 to="/masterclass-2"
                 className="btn-secondary mc-btn btn-view-curriculum"
               >
@@ -190,7 +205,7 @@ const Masterclass = () => {
             <div className="preview-badge-container">
               <span className="preview-badge">🔥 EDICIÓN PRESENCIAL • 14 Y 16 DE DICIEMBRE • 4 A 7 PM</span>
             </div>
-            
+
             <motion.h3
               className="timer-title"
               variants={fadeInUp}
@@ -205,7 +220,7 @@ const Masterclass = () => {
             <FlipClock targetDate="2026-12-14T16:00:00" className="mc-home-clock" />
 
             {/* Preview de los 6 Temas */}
-            <motion.div 
+            <motion.div
               className="mc-topics-preview-card"
               variants={fadeInUp}
               initial="hidden"

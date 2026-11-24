@@ -18,7 +18,10 @@ import {
   Network,
   TrendingUp,
   ShieldCheck,
-  DollarSign
+  DollarSign,
+  Laptop,
+  Mail,
+  Globe
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FlipClock from '../components/FlipClock';
@@ -345,6 +348,167 @@ const MasterclassInfo = () => {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+        </section>
+
+        {/* ============================================================== */}
+        {/* SECCIÓN DE REQUISITOS (CON ÉNFASIS EN LAPTOP PREFERIBLEMENTE)  */}
+        {/* ============================================================== */}
+        <section className="mc-requirements-section">
+          <motion.div 
+            className="requirements-header text-center"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <span className="section-subtitle text-accent">PREPARACIÓN</span>
+            <h2 className="requirements-title">Requisitos para Asistir</h2>
+            <p className="requirements-desc">
+              Todo lo que necesitas para aprovechar al máximo esta formación presencial. Diseñada para que cualquier persona pueda comenzar sin barreras técnicas.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="requirements-grid"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* 1. Laptop (Preferiblemente) - Tarjeta Destacada */}
+            <motion.div 
+              className="requirement-card glass-card req-featured"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge req-laptop-badge">
+                  <Laptop size={28} />
+                </div>
+                <span className="req-tag-highlight">★ RECOMENDADO</span>
+              </div>
+              <h3 className="req-card-title">
+                Laptop <span className="req-subtitle-accent">(Preferiblemente)</span>
+              </h3>
+              <p className="req-card-description">
+                Te sugerimos llevar tu computadora portátil (Windows, Mac o Linux) con su cargador para que realices las prácticas, pruebes las herramientas y configures tus flujos de trabajo en vivo junto al instructor.
+              </p>
+              <div className="req-note-banner">
+                <CheckCircle size={16} className="req-note-icon" />
+                <span>Si no dispones de laptop, igualmente puedes asistir, ver todas las demostraciones en pantalla grande y tomar apuntes.</span>
+              </div>
+            </motion.div>
+
+            {/* 2. Cero experiencia requerida */}
+            <motion.div 
+              className="requirement-card glass-card"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge">
+                  <Sparkles size={26} />
+                </div>
+                <span className="req-tag-neutral">NIVEL INICIAL</span>
+              </div>
+              <h3 className="req-card-title">Cero Experiencia Previa</h3>
+              <p className="req-card-description">
+                No requieres conocimientos previos de programación, matemáticas complejas ni experiencia técnica con IA. El entrenamiento parte desde las bases fundamentales con explicaciones sencillas y paso a paso.
+              </p>
+              <div className="req-pill-footer">
+                <CheckCircle size={15} />
+                <span>Apto para principiantes y entusiastas</span>
+              </div>
+            </motion.div>
+
+            {/* 3. Cuenta de correo activa */}
+            <motion.div 
+              className="requirement-card glass-card"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge">
+                  <Mail size={26} />
+                </div>
+                <span className="req-tag-neutral">ACCESO RÁPIDO</span>
+              </div>
+              <h3 className="req-card-title">Correo Electrónico Activo</h3>
+              <p className="req-card-description">
+                Tener una cuenta de correo personal o de trabajo activa (preferiblemente Gmail) para poder registrarte al instante en las herramientas y plataformas 100% gratuitas que usaremos en la clase.
+              </p>
+              <div className="req-pill-footer">
+                <CheckCircle size={15} />
+                <span>Registro 100% gratuito en plataformas</span>
+              </div>
+            </motion.div>
+
+            {/* 4. Navegador web moderno */}
+            <motion.div 
+              className="requirement-card glass-card"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge">
+                  <Globe size={26} />
+                </div>
+                <span className="req-tag-neutral">SOFTWARE BÁSICO</span>
+              </div>
+              <h3 className="req-card-title">Navegador Web Actualizado</h3>
+              <p className="req-card-description">
+                Cualquier navegador moderno instalado (Google Chrome, Microsoft Edge, Brave o Safari). Las herramientas funcionan en la nube directamente desde el navegador, sin necesidad de instalaciones pesadas.
+              </p>
+              <div className="req-pill-footer">
+                <CheckCircle size={15} />
+                <span>Sin instalaciones complejas</span>
+              </div>
+            </motion.div>
+
+            {/* 5. Cuaderno o libreta */}
+            <motion.div 
+              className="requirement-card glass-card"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge">
+                  <BookOpen size={26} />
+                </div>
+                <span className="req-tag-neutral">OPCIONAL</span>
+              </div>
+              <h3 className="req-card-title">Cuaderno o Libreta de Notas</h3>
+              <p className="req-card-description">
+                Recomendado para plasmar fórmulas de prompts, estructuras de automatización, ideas de modelos de negocio y notas estratégicas que surjan durante las sesiones.
+              </p>
+              <div className="req-pill-footer">
+                <CheckCircle size={15} />
+                <span>Apuntes de alto valor</span>
+              </div>
+            </motion.div>
+
+            {/* 6. Ganas de aprender y curiosidad */}
+            <motion.div 
+              className="requirement-card glass-card"
+              variants={fadeInUp}
+              whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            >
+              <div className="req-card-topbar">
+                <div className="req-icon-badge">
+                  <Zap size={26} />
+                </div>
+                <span className="req-tag-neutral">FUNDAMENTAL</span>
+              </div>
+              <h3 className="req-card-title">Ganas de Aprender y Curiosidad</h3>
+              <p className="req-card-description">
+                La mejor disposición para hacer preguntas, probar cosas nuevas y descubrir cómo la inteligencia artificial puede ahorrarte horas de trabajo semanal y abrir nuevas fuentes de ingresos.
+              </p>
+              <div className="req-pill-footer">
+                <CheckCircle size={15} />
+                <span>Mentalidad de crecimiento</span>
+              </div>
+            </motion.div>
           </motion.div>
         </section>
 
