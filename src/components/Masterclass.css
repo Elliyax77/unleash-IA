@@ -297,3 +297,171 @@
     font-size: 0.5rem !important;
   }
 }
+
+/* ============================================================== */
+/* MC PRICE HIGHLIGHT BANNER & CTA                                */
+/* ============================================================== */
+
+.mc-price-highlight-banner {
+  background: linear-gradient(135deg, rgba(255, 149, 0, 0.12) 0%, rgba(201, 0, 0, 0.15) 100%);
+  border: 1.5px solid rgba(255, 149, 0, 0.45);
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 149, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mc-banner-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-reserve-promo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 149, 0, 0.2);
+  border: 1px solid rgba(255, 149, 0, 0.5);
+  color: #FFAA00;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.mc-total-tag {
+  font-size: 0.85rem;
+  color: #D1D5DB;
+  font-weight: 700;
+}
+
+.mc-reserve-callout {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.callout-amount {
+  color: #FFB800;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255, 184, 0, 0.4);
+}
+
+.callout-note {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.mc-cta-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.btn-reserve-instant {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FF9500 0%, #C90000 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 0.95rem 1.8rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 149, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-reserve-instant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 149, 0, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-view-curriculum {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.95rem 1.6rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-view-curriculum:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Topics Mini Card on Right */
+.mc-topics-preview-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin: 1.5rem 0 1rem;
+  width: 100%;
+}
+
+.topics-preview-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.topics-mini-chips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.mini-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #E5E7EB;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.65rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .topics-mini-chips-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-reserve-instant,
+  .btn-view-curriculum {
+    width: 100%;
+    justify-content: center;
+  }
+}
