@@ -459,6 +459,34 @@
   line-height: 1.6;
 }
 
+.curriculum-free-banner {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 1rem 1.6rem;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 680px;
+}
+
+.free-banner-icon {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.free-banner-text {
+  font-size: 0.95rem;
+  color: #E5E7EB;
+  line-height: 1.5;
+}
+
+.free-banner-text strong {
+  color: #10B981;
+}
+
 .curriculum-modules-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -52,21 +52,21 @@ const MasterclassInfo = () => {
       title: "Programación con IA",
       icon: <Code size={26} />,
       badge: "Desarrollo Acelerado",
-      description: "Aprende a programar software, scripts de automatización y aplicaciones web multiplicando tu velocidad x10 utilizando modelos avanzados y editores como Cursor, Claude y Copilot. De la idea al código funcional sin trabas técnicas."
+      description: "Aprende a programar software, scripts de automatización y aplicaciones web multiplicando tu velocidad x10 utilizando herramientas y entornos de desarrollo 100% gratuitos. De la idea al código funcional sin trabas técnicas ni pagos de suscripciones."
     },
     {
       id: 2,
       title: "Ingeniería de Prompts",
       icon: <MessageSquare size={26} />,
       badge: "Técnica Avanzada",
-      description: "Domina las metodologías de comunicación de alto impacto con LLMs: Zero-Shot, Few-Shot, Chain-of-Thought, Meta-Prompting y control de contexto para extraer respuestas de máxima precisión, estructuradas y sin alucinaciones."
+      description: "Domina las metodologías de comunicación de alto impacto: Zero-Shot, Few-Shot, Chain-of-Thought, Meta-Prompting y control de contexto para extraer respuestas de máxima precisión, estructuradas y sin alucinaciones en modelos 100% gratuitos."
     },
     {
       id: 3,
       title: "Arsenal de Herramientas",
       icon: <Wrench size={26} />,
-      badge: "Stack Definitivo",
-      description: "Explora y domina el catálogo imprescindible de herramientas de Inteligencia Artificial para generación de texto, imagen fotorrealista (Midjourney/Flux), audio y clonación de voz (ElevenLabs), video generativo y automatizaciones complejas."
+      badge: "Stack 100% Gratuito",
+      description: "Explora y domina un arsenal completo de herramientas de Inteligencia Artificial 100% gratuitas para generación de texto, imágenes de alta calidad, clonación de audio/voz, video generativo y automatizaciones prácticas sin gastar en suscripciones."
     },
     {
       id: 4,
@@ -80,14 +80,14 @@ const MasterclassInfo = () => {
       title: "Ecosistema de IA",
       icon: <Network size={26} />,
       badge: "Arquitectura & Agentes",
-      description: "Comprende cómo interactúan las piezas del rompecabezas: modelos propietarios (OpenAI, Anthropic, Google) vs modelos Open Source (Llama, DeepSeek, Mistral), bases de datos vectoriales (RAG) y agentes autónomos colaborativos."
+      description: "Comprende cómo interactúan las piezas del rompecabezas: modelos abiertos, alternativas locales y plataformas 100% gratuitas, bases de datos vectoriales (RAG) y agentes autónomos colaborativos sin depender de servicios pagos."
     },
     {
       id: 6,
       title: "Vías de Monetización",
       icon: <TrendingUp size={26} />,
       badge: "Modelos de Negocio",
-      description: "Estrategias reales y validadas para capitalizar la IA: creación de Micro-SaaS, consultoría e implementación para empresas, automatización de procesos B2B, creación de productos digitales y venta de servicios de alto ticket."
+      description: "Estrategias reales y validadas para capitalizar la IA aplicando herramientas 100% gratis: creación de soluciones digitales, consultoría e implementación para empresas, automatización de procesos y servicios de alto valor."
     }
   ];
 
@@ -203,6 +203,10 @@ const MasterclassInfo = () => {
                 </div>
                 <div className="vip-feature-item">
                   <CheckCircle size={18} className="vip-check" />
+                  <span><strong>Herramientas 100% Gratis:</strong> Todo el software y modelos explicados serán gratuitos, sin costos ocultos.</span>
+                </div>
+                <div className="vip-feature-item">
+                  <CheckCircle size={18} className="vip-check" />
                   <span><strong>Acceso Completo:</strong> Material descargable, prompts y certificados.</span>
                 </div>
               </div>
@@ -301,6 +305,13 @@ const MasterclassInfo = () => {
             <p className="curriculum-desc">
               Una ruta formativa estructurada para llevarte desde la comprensión profunda de la inteligencia artificial hasta su aplicación práctica y monetización en el mundo real.
             </p>
+
+            <div className="curriculum-free-banner glass-card">
+              <Sparkles size={20} className="free-banner-icon" />
+              <div className="free-banner-text">
+                <strong>Herramientas 100% Gratuitas:</strong> Todo el software, plataformas y modelos que utilizaremos y aprenderás en la clase serán completamente gratuitos y accesibles. No requerirás pagar ninguna suscripción adicional.
+              </div>
+            </div>
           </motion.div>
 
           <motion.div 
@@ -330,7 +341,7 @@ const MasterclassInfo = () => {
                 
                 <div className="module-footer-pill">
                   <CheckCircle size={15} />
-                  <span>Práctica Guiada Incluida</span>
+                  <span>Herramientas 100% Gratis • Práctica Guiada</span>
                 </div>
               </motion.div>
             ))}

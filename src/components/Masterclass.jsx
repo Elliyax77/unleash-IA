@@ -213,7 +213,7 @@ const Masterclass = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <h4 className="topics-preview-title">Contenido Principal de la Masterclass:</h4>
+              <h4 className="topics-preview-title">Contenido de la Masterclass (Herramientas 100% Gratis):</h4>
               <div className="topics-mini-chips-grid">
                 <span className="mini-chip">💻 Programación con IA</span>
                 <span className="mini-chip">🧠 Ingeniería de Prompts</span>
